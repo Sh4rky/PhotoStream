@@ -16,12 +16,16 @@
 		C1EA1F291E0C11A100D61455 /* PhotoStreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F281E0C11A100D61455 /* PhotoStreamUITests.swift */; };
 		C1EA1F371E0C1F1000D61455 /* PhotoStreamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F361E0C1F1000D61455 /* PhotoStreamCoordinator.swift */; };
 		C1EA1F3A1E0C1F4F00D61455 /* PhotoStreamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F391E0C1F4F00D61455 /* PhotoStreamPresenter.swift */; };
-		C1EA1F3D1E0C1F7600D61455 /* PhotoStreamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F3C1E0C1F7600D61455 /* PhotoStreamCoordinator.swift */; };
-		C1EA1F3F1E0C1F8700D61455 /* PhotoStreamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F3E1E0C1F8700D61455 /* PhotoStreamPresenter.swift */; };
-		C1EA1F411E0C1FEA00D61455 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F401E0C1FEA00D61455 /* PhotoStreamViewController.swift */; };
+		C1EA1F3D1E0C1F7600D61455 /* PhotoStreamCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F3C1E0C1F7600D61455 /* PhotoStreamCoordinatorTest.swift */; };
+		C1EA1F3F1E0C1F8700D61455 /* PhotoStreamPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F3E1E0C1F8700D61455 /* PhotoStreamPresenterTest.swift */; };
+		C1EA1F411E0C1FEA00D61455 /* PhotoStreamViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F401E0C1FEA00D61455 /* PhotoStreamViewControllerTest.swift */; };
 		C1EA1F431E0C202300D61455 /* PhotoStreamDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F421E0C202300D61455 /* PhotoStreamDataSource.swift */; };
-		C1EA1F471E0C234700D61455 /* PhotoStreamDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F461E0C234700D61455 /* PhotoStreamDataSource.swift */; };
+		C1EA1F471E0C234700D61455 /* PhotoStreamDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F461E0C234700D61455 /* PhotoStreamDataSourceTest.swift */; };
 		C1EA1F4A1E0C248B00D61455 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F491E0C248B00D61455 /* Photo.swift */; };
+		C1EA1F4C1E0C698800D61455 /* PhotoStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1EA1F4B1E0C698800D61455 /* PhotoStreamViewController.xib */; };
+		C1EA1F4F1E0C85DD00D61455 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F4E1E0C85DD00D61455 /* NetworkManager.swift */; };
+		C1EA1F521E0C93AB00D61455 /* MockedNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F511E0C93AB00D61455 /* MockedNetworkManager.swift */; };
+		C1EA1F551E0D608F00D61455 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F541E0D608F00D61455 /* UIView+Autolayout.swift */; };
 		D375FD1B90B678877F5F540F /* Pods_PhotoStreamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A158FB42A8B2CE43F72627F8 /* Pods_PhotoStreamTests.framework */; };
 		FCB38D3D8018B965DBCB3375 /* Pods_PhotoStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF8AC4E912C7CDCC9998F9B /* Pods_PhotoStream.framework */; };
 /* End PBXBuildFile section */
@@ -63,12 +67,16 @@
 		C1EA1F2A1E0C11A200D61455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1EA1F361E0C1F1000D61455 /* PhotoStreamCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamCoordinator.swift; sourceTree = "<group>"; };
 		C1EA1F391E0C1F4F00D61455 /* PhotoStreamPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamPresenter.swift; sourceTree = "<group>"; };
-		C1EA1F3C1E0C1F7600D61455 /* PhotoStreamCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamCoordinator.swift; sourceTree = "<group>"; };
-		C1EA1F3E1E0C1F8700D61455 /* PhotoStreamPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamPresenter.swift; sourceTree = "<group>"; };
-		C1EA1F401E0C1FEA00D61455 /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewController.swift; sourceTree = "<group>"; };
+		C1EA1F3C1E0C1F7600D61455 /* PhotoStreamCoordinatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamCoordinatorTest.swift; sourceTree = "<group>"; };
+		C1EA1F3E1E0C1F8700D61455 /* PhotoStreamPresenterTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamPresenterTest.swift; sourceTree = "<group>"; };
+		C1EA1F401E0C1FEA00D61455 /* PhotoStreamViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewControllerTest.swift; sourceTree = "<group>"; };
 		C1EA1F421E0C202300D61455 /* PhotoStreamDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamDataSource.swift; sourceTree = "<group>"; };
-		C1EA1F461E0C234700D61455 /* PhotoStreamDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamDataSource.swift; sourceTree = "<group>"; };
+		C1EA1F461E0C234700D61455 /* PhotoStreamDataSourceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamDataSourceTest.swift; sourceTree = "<group>"; };
 		C1EA1F491E0C248B00D61455 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C1EA1F4B1E0C698800D61455 /* PhotoStreamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoStreamViewController.xib; sourceTree = "<group>"; };
+		C1EA1F4E1E0C85DD00D61455 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C1EA1F511E0C93AB00D61455 /* MockedNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedNetworkManager.swift; sourceTree = "<group>"; };
+		C1EA1F541E0D608F00D61455 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		CE39CA2E7E66EFF6A6D7F317 /* Pods-PhotoStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoStream.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoStream/Pods-PhotoStream.release.xcconfig"; sourceTree = "<group>"; };
 		E2D71B025D55CD630A607BA3 /* Pods-PhotoStreamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoStreamUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoStreamUITests/Pods-PhotoStreamUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E2E300FCBCA01BA81ABE2F9C /* Pods-PhotoStreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoStreamUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoStreamUITests/Pods-PhotoStreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +159,8 @@
 		C1EA1F071E0C11A100D61455 /* PhotoStream */ = {
 			isa = PBXGroup;
 			children = (
+				C1EA1F531E0D606200D61455 /* Utils */,
+				C1EA1F4D1E0C85B800D61455 /* Communications */,
 				C1EA1F481E0C247600D61455 /* Entities */,
 				C1EA1F381E0C1F3800D61455 /* PhotoStream */,
 				C1EA1F081E0C11A100D61455 /* AppDelegate.swift */,
@@ -164,6 +174,7 @@
 		C1EA1F1C1E0C11A100D61455 /* PhotoStreamTests */ = {
 			isa = PBXGroup;
 			children = (
+				C1EA1F501E0C938F00D61455 /* Mocks */,
 				C1EA1F3B1E0C1F5D00D61455 /* PhotoStream */,
 				C1EA1F1D1E0C11A100D61455 /* PhotoStreamTests.swift */,
 				C1EA1F1F1E0C11A100D61455 /* Info.plist */,
@@ -187,6 +198,7 @@
 				C1EA1F361E0C1F1000D61455 /* PhotoStreamCoordinator.swift */,
 				C1EA1F391E0C1F4F00D61455 /* PhotoStreamPresenter.swift */,
 				C1EA1F421E0C202300D61455 /* PhotoStreamDataSource.swift */,
+				C1EA1F4B1E0C698800D61455 /* PhotoStreamViewController.xib */,
 			);
 			name = PhotoStream;
 			sourceTree = "<group>";
@@ -194,10 +206,10 @@
 		C1EA1F3B1E0C1F5D00D61455 /* PhotoStream */ = {
 			isa = PBXGroup;
 			children = (
-				C1EA1F3C1E0C1F7600D61455 /* PhotoStreamCoordinator.swift */,
-				C1EA1F3E1E0C1F8700D61455 /* PhotoStreamPresenter.swift */,
-				C1EA1F401E0C1FEA00D61455 /* PhotoStreamViewController.swift */,
-				C1EA1F461E0C234700D61455 /* PhotoStreamDataSource.swift */,
+				C1EA1F3C1E0C1F7600D61455 /* PhotoStreamCoordinatorTest.swift */,
+				C1EA1F3E1E0C1F8700D61455 /* PhotoStreamPresenterTest.swift */,
+				C1EA1F401E0C1FEA00D61455 /* PhotoStreamViewControllerTest.swift */,
+				C1EA1F461E0C234700D61455 /* PhotoStreamDataSourceTest.swift */,
 			);
 			name = PhotoStream;
 			sourceTree = "<group>";
@@ -208,6 +220,30 @@
 				C1EA1F491E0C248B00D61455 /* Photo.swift */,
 			);
 			name = Entities;
+			sourceTree = "<group>";
+		};
+		C1EA1F4D1E0C85B800D61455 /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+				C1EA1F4E1E0C85DD00D61455 /* NetworkManager.swift */,
+			);
+			name = Communications;
+			sourceTree = "<group>";
+		};
+		C1EA1F501E0C938F00D61455 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C1EA1F511E0C93AB00D61455 /* MockedNetworkManager.swift */,
+			);
+			name = Mocks;
+			sourceTree = "<group>";
+		};
+		C1EA1F531E0D606200D61455 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C1EA1F541E0D608F00D61455 /* UIView+Autolayout.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1EA1F4C1E0C698800D61455 /* PhotoStreamViewController.xib in Resources */,
 				C1EA1F131E0C11A100D61455 /* LaunchScreen.storyboard in Resources */,
 				C1EA1F101E0C11A100D61455 /* Assets.xcassets in Resources */,
 			);
@@ -485,6 +522,8 @@
 				C1EA1F091E0C11A100D61455 /* AppDelegate.swift in Sources */,
 				C1EA1F371E0C1F1000D61455 /* PhotoStreamCoordinator.swift in Sources */,
 				C1EA1F431E0C202300D61455 /* PhotoStreamDataSource.swift in Sources */,
+				C1EA1F551E0D608F00D61455 /* UIView+Autolayout.swift in Sources */,
+				C1EA1F4F1E0C85DD00D61455 /* NetworkManager.swift in Sources */,
 				C1EA1F3A1E0C1F4F00D61455 /* PhotoStreamPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,10 +533,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1EA1F1E1E0C11A100D61455 /* PhotoStreamTests.swift in Sources */,
-				C1EA1F3D1E0C1F7600D61455 /* PhotoStreamCoordinator.swift in Sources */,
-				C1EA1F3F1E0C1F8700D61455 /* PhotoStreamPresenter.swift in Sources */,
-				C1EA1F471E0C234700D61455 /* PhotoStreamDataSource.swift in Sources */,
-				C1EA1F411E0C1FEA00D61455 /* PhotoStreamViewController.swift in Sources */,
+				C1EA1F521E0C93AB00D61455 /* MockedNetworkManager.swift in Sources */,
+				C1EA1F3D1E0C1F7600D61455 /* PhotoStreamCoordinatorTest.swift in Sources */,
+				C1EA1F3F1E0C1F8700D61455 /* PhotoStreamPresenterTest.swift in Sources */,
+				C1EA1F471E0C234700D61455 /* PhotoStreamDataSourceTest.swift in Sources */,
+				C1EA1F411E0C1FEA00D61455 /* PhotoStreamViewControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

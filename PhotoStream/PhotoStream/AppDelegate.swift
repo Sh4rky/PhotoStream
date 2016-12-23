@@ -18,6 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow.init(frame: UIScreen.main.bounds)
         //TODO Gonza: Add viewController from coordinator as rootViewController
+        let viewController = UIViewController.init()
+        viewController.view.frame = UIScreen.main.bounds
+        window?.rootViewController = viewController
+        
+        let networkManager = NetworkManager()
+        
+        PhotoStreamCoordinator.spawnPhotoStream(parentViewController: viewController, networkManager: networkManager)
         window?.makeKeyAndVisible()
         return true
     }

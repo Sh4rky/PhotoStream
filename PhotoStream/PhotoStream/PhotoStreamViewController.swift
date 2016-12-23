@@ -10,16 +10,14 @@ import UIKit
 
 class PhotoStreamViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    var presenter: PhotoStreamPresenter?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        presenter?.loadView()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
 

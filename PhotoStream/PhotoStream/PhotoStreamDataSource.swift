@@ -16,7 +16,7 @@ class PhotoStreamDataSource:NSObject, UICollectionViewDataSource {
     static let imageFrameThickness: CGFloat = 5
     let placeholderImage = UIImage(named: "no_image")!
     
-    init(photos: Array<Photo> ) {
+    init(photos: [Photo] ) {
         self.photos = photos
         super.init()
     }

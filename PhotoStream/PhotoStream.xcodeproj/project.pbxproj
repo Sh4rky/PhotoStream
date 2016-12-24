@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34F73AEAF9C4CA5053488050 /* Pods_PhotoStreamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D1885CE910149BFFC292BA /* Pods_PhotoStreamUITests.framework */; };
 		C16D76C31E0EACDB0058AD1F /* MockedPhotoStreamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D76C21E0EACDB0058AD1F /* MockedPhotoStreamPresenter.swift */; };
 		C16D76C51E0EAD5F0058AD1F /* MockedPhotoStreamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D76C41E0EAD5F0058AD1F /* MockedPhotoStreamCoordinator.swift */; };
 		C16D76C71E0EBE780058AD1F /* photosJSON in Resources */ = {isa = PBXBuildFile; fileRef = C1EA1F561E0DC05700D61455 /* photosJSON */; };
 		C16D76C91E0ECC0C0058AD1F /* MockedPhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D76C81E0ECC0C0058AD1F /* MockedPhotoStreamViewController.swift */; };
+		C16D76CC1E0EF0830058AD1F /* NetworkManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D76CB1E0EF0830058AD1F /* NetworkManagerTest.swift */; };
+		C16D76CF1E0EF6BE0058AD1F /* PhotoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16D76CE1E0EF6BE0058AD1F /* PhotoTest.swift */; };
+		C16D76D11E0EF7B10058AD1F /* photoJSON in Resources */ = {isa = PBXBuildFile; fileRef = C16D76D01E0EF7B10058AD1F /* photoJSON */; };
 		C1EA1F091E0C11A100D61455 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F081E0C11A100D61455 /* AppDelegate.swift */; };
 		C1EA1F0B1E0C11A100D61455 /* PhotoStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F0A1E0C11A100D61455 /* PhotoStreamViewController.swift */; };
 		C1EA1F101E0C11A100D61455 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1EA1F0F1E0C11A100D61455 /* Assets.xcassets */; };
 		C1EA1F131E0C11A100D61455 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1EA1F111E0C11A100D61455 /* LaunchScreen.storyboard */; };
 		C1EA1F1E1E0C11A100D61455 /* PhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F1D1E0C11A100D61455 /* PhotoTests.swift */; };
-		C1EA1F291E0C11A100D61455 /* PhotoStreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F281E0C11A100D61455 /* PhotoStreamUITests.swift */; };
 		C1EA1F371E0C1F1000D61455 /* PhotoStreamCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F361E0C1F1000D61455 /* PhotoStreamCoordinator.swift */; };
 		C1EA1F3A1E0C1F4F00D61455 /* PhotoStreamPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F391E0C1F4F00D61455 /* PhotoStreamPresenter.swift */; };
 		C1EA1F3D1E0C1F7600D61455 /* PhotoStreamCoordinatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F3C1E0C1F7600D61455 /* PhotoStreamCoordinatorTest.swift */; };
@@ -44,13 +45,6 @@
 			remoteGlobalIDString = C1EA1F041E0C11A100D61455;
 			remoteInfo = PhotoStream;
 		};
-		C1EA1F251E0C11A100D61455 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C1EA1EFD1E0C11A100D61455 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1EA1F041E0C11A100D61455;
-			remoteInfo = PhotoStream;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +56,9 @@
 		C16D76C21E0EACDB0058AD1F /* MockedPhotoStreamPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedPhotoStreamPresenter.swift; sourceTree = "<group>"; };
 		C16D76C41E0EAD5F0058AD1F /* MockedPhotoStreamCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedPhotoStreamCoordinator.swift; sourceTree = "<group>"; };
 		C16D76C81E0ECC0C0058AD1F /* MockedPhotoStreamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedPhotoStreamViewController.swift; sourceTree = "<group>"; };
+		C16D76CB1E0EF0830058AD1F /* NetworkManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
+		C16D76CE1E0EF6BE0058AD1F /* PhotoTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTest.swift; sourceTree = "<group>"; };
+		C16D76D01E0EF7B10058AD1F /* photoJSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = photoJSON; sourceTree = "<group>"; };
 		C1EA1F051E0C11A100D61455 /* PhotoStream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoStream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EA1F081E0C11A100D61455 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1EA1F0A1E0C11A100D61455 /* PhotoStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStreamViewController.swift; sourceTree = "<group>"; };
@@ -71,9 +68,6 @@
 		C1EA1F191E0C11A100D61455 /* PhotoStreamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoStreamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1EA1F1D1E0C11A100D61455 /* PhotoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTests.swift; sourceTree = "<group>"; };
 		C1EA1F1F1E0C11A100D61455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C1EA1F241E0C11A100D61455 /* PhotoStreamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoStreamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1EA1F281E0C11A100D61455 /* PhotoStreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStreamUITests.swift; sourceTree = "<group>"; };
-		C1EA1F2A1E0C11A200D61455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1EA1F361E0C1F1000D61455 /* PhotoStreamCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamCoordinator.swift; sourceTree = "<group>"; };
 		C1EA1F391E0C1F4F00D61455 /* PhotoStreamPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamPresenter.swift; sourceTree = "<group>"; };
 		C1EA1F3C1E0C1F7600D61455 /* PhotoStreamCoordinatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoStreamCoordinatorTest.swift; sourceTree = "<group>"; };
@@ -112,14 +106,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C1EA1F211E0C11A100D61455 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				34F73AEAF9C4CA5053488050 /* Pods_PhotoStreamUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -146,12 +132,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C16D76CA1E0EF06E0058AD1F /* Communications */ = {
+			isa = PBXGroup;
+			children = (
+				C16D76CB1E0EF0830058AD1F /* NetworkManagerTest.swift */,
+			);
+			name = Communications;
+			sourceTree = "<group>";
+		};
+		C16D76CD1E0EF6AF0058AD1F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C16D76D01E0EF7B10058AD1F /* photoJSON */,
+				C16D76CE1E0EF6BE0058AD1F /* PhotoTest.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		C1EA1EFC1E0C11A100D61455 = {
 			isa = PBXGroup;
 			children = (
 				C1EA1F071E0C11A100D61455 /* PhotoStream */,
 				C1EA1F1C1E0C11A100D61455 /* PhotoStreamTests */,
-				C1EA1F271E0C11A100D61455 /* PhotoStreamUITests */,
 				C1EA1F061E0C11A100D61455 /* Products */,
 				9B24BBA8976C5786F1B2BA37 /* Pods */,
 				A8DD04269D6B0BF1E9663C0C /* Frameworks */,
@@ -163,7 +165,6 @@
 			children = (
 				C1EA1F051E0C11A100D61455 /* PhotoStream.app */,
 				C1EA1F191E0C11A100D61455 /* PhotoStreamTests.xctest */,
-				C1EA1F241E0C11A100D61455 /* PhotoStreamUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,21 +187,14 @@
 		C1EA1F1C1E0C11A100D61455 /* PhotoStreamTests */ = {
 			isa = PBXGroup;
 			children = (
+				C16D76CD1E0EF6AF0058AD1F /* Entities */,
+				C16D76CA1E0EF06E0058AD1F /* Communications */,
 				C1EA1F501E0C938F00D61455 /* Mocks */,
 				C1EA1F3B1E0C1F5D00D61455 /* PhotoStream */,
 				C1EA1F1D1E0C11A100D61455 /* PhotoTests.swift */,
 				C1EA1F1F1E0C11A100D61455 /* Info.plist */,
 			);
 			path = PhotoStreamTests;
-			sourceTree = "<group>";
-		};
-		C1EA1F271E0C11A100D61455 /* PhotoStreamUITests */ = {
-			isa = PBXGroup;
-			children = (
-				C1EA1F281E0C11A100D61455 /* PhotoStreamUITests.swift */,
-				C1EA1F2A1E0C11A200D61455 /* Info.plist */,
-			);
-			path = PhotoStreamUITests;
 			sourceTree = "<group>";
 		};
 		C1EA1F381E0C1F3800D61455 /* PhotoStream */ = {
@@ -308,26 +302,6 @@
 			productReference = C1EA1F191E0C11A100D61455 /* PhotoStreamTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C1EA1F231E0C11A100D61455 /* PhotoStreamUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1EA1F331E0C11A200D61455 /* Build configuration list for PBXNativeTarget "PhotoStreamUITests" */;
-			buildPhases = (
-				2995391012C2FB3CC2345619 /* [CP] Check Pods Manifest.lock */,
-				C1EA1F201E0C11A100D61455 /* Sources */,
-				C1EA1F211E0C11A100D61455 /* Frameworks */,
-				C1EA1F221E0C11A100D61455 /* Resources */,
-				65CB3EB563A8AF96CE23F91E /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1EA1F261E0C11A100D61455 /* PBXTargetDependency */,
-			);
-			name = PhotoStreamUITests;
-			productName = PhotoStreamUITests;
-			productReference = C1EA1F241E0C11A100D61455 /* PhotoStreamUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -351,13 +325,6 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = C1EA1F041E0C11A100D61455;
 					};
-					C1EA1F231E0C11A100D61455 = {
-						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = D46J73KHUX;
-						LastSwiftMigration = 0810;
-						ProvisioningStyle = Automatic;
-						TestTargetID = C1EA1F041E0C11A100D61455;
-					};
 				};
 			};
 			buildConfigurationList = C1EA1F001E0C11A100D61455 /* Build configuration list for PBXProject "PhotoStream" */;
@@ -375,7 +342,6 @@
 			targets = (
 				C1EA1F041E0C11A100D61455 /* PhotoStream */,
 				C1EA1F181E0C11A100D61455 /* PhotoStreamTests */,
-				C1EA1F231E0C11A100D61455 /* PhotoStreamUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -397,13 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C16D76C71E0EBE780058AD1F /* photosJSON in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1EA1F221E0C11A100D61455 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C16D76D11E0EF7B10058AD1F /* photoJSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,21 +400,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoStream/Pods-PhotoStream-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2995391012C2FB3CC2345619 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		416B9FDFB1274BDC8229149F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -468,21 +413,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		65CB3EB563A8AF96CE23F91E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoStreamUITests/Pods-PhotoStreamUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D5B1C3C8A7E0CC6EE7502EB /* [CP] Embed Pods Frameworks */ = {
@@ -560,16 +490,10 @@
 				C1EA1F3D1E0C1F7600D61455 /* PhotoStreamCoordinatorTest.swift in Sources */,
 				C1EA1F3F1E0C1F8700D61455 /* PhotoStreamPresenterTest.swift in Sources */,
 				C16D76C91E0ECC0C0058AD1F /* MockedPhotoStreamViewController.swift in Sources */,
+				C16D76CF1E0EF6BE0058AD1F /* PhotoTest.swift in Sources */,
 				C1EA1F471E0C234700D61455 /* PhotoStreamDataSourceTest.swift in Sources */,
+				C16D76CC1E0EF0830058AD1F /* NetworkManagerTest.swift in Sources */,
 				C1EA1F411E0C1FEA00D61455 /* PhotoStreamViewControllerTest.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1EA1F201E0C11A100D61455 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C1EA1F291E0C11A100D61455 /* PhotoStreamUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,11 +504,6 @@
 			isa = PBXTargetDependency;
 			target = C1EA1F041E0C11A100D61455 /* PhotoStream */;
 			targetProxy = C1EA1F1A1E0C11A100D61455 /* PBXContainerItemProxy */;
-		};
-		C1EA1F261E0C11A100D61455 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1EA1F041E0C11A100D61455 /* PhotoStream */;
-			targetProxy = C1EA1F251E0C11A100D61455 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -757,36 +676,6 @@
 			};
 			name = Release;
 		};
-		C1EA1F341E0C11A200D61455 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2E300FCBCA01BA81ABE2F9C /* Pods-PhotoStreamUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = D46J73KHUX;
-				INFOPLIST_FILE = PhotoStreamUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gonzalo.PhotoStreamUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = PhotoStream;
-			};
-			name = Debug;
-		};
-		C1EA1F351E0C11A200D61455 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2D71B025D55CD630A607BA3 /* Pods-PhotoStreamUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = D46J73KHUX;
-				INFOPLIST_FILE = PhotoStreamUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.gonzalo.PhotoStreamUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = PhotoStream;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -813,15 +702,6 @@
 			buildConfigurations = (
 				C1EA1F311E0C11A200D61455 /* Debug */,
 				C1EA1F321E0C11A200D61455 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C1EA1F331E0C11A200D61455 /* Build configuration list for PBXNativeTarget "PhotoStreamUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1EA1F341E0C11A200D61455 /* Debug */,
-				C1EA1F351E0C11A200D61455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

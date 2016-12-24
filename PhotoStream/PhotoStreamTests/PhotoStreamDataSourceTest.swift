@@ -17,11 +17,11 @@ class PhotoStreamDataSourceTest: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        let photo = Photo(username: "Gonzalo",
-                          title:"A photo",
-                          date:"2016-12-01",
-                          urlString: "")
-        let photos: Array<Photo> = Array.init(repeating: photo, count: 1)
+        let photo:Photo = Photo(username: "Gonzalo",
+                                title:"A photo",
+                                date:"2016-12-01",
+                                urlString: "")
+        let photos: [Photo] = Array(repeating: photo, count: 1) as! [Photo]
         photoStreamDatasource = PhotoStreamDataSource(photos: photos)
         
         let layout = UICollectionViewFlowLayout()

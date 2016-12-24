@@ -26,7 +26,7 @@ class PhotoStreamViewControllerTest: XCTestCase {
                           date:"2016-12-01",
                           urlString: "")
         let photos: Array<Photo> = Array.init(repeating: photo, count: 1)
-        let photoStreamDatasource = PhotoStreamDataSource(photos: photos)
+        let photoStreamDatasource = PhotoStreamDataSource(photos: photos )
         viewController?.datasource = photoStreamDatasource
     }
     

@@ -15,11 +15,13 @@ class PhotoStreamCoordinator: NSObject {
     
     static func spawnPhotoStream(parentViewController: UIViewController, networkManager: NetworkManager) -> PhotoStreamCoordinator {
         let coordinator = PhotoStreamCoordinator.init(parentViewController: parentViewController)
-        let viewController = PhotoStreamPresenter.createViewController(networkManager: networkManager)
         
-        coordinator.parentViewController.addChildViewController(viewController)
-        coordinator.parentViewController.view.addAndAttachViewToMargins(view: viewController.view)
-        viewController.didMove(toParentViewController: coordinator.parentViewController)
+        let viewController = PhotoStreamPresenter.createViewController(networkManager: networkManager)
+        let navigationViewController = UINavigationController.init(rootViewController: viewController)
+        
+        coordinator.parentViewController.addChildViewController(navigationViewController)
+        coordinator.parentViewController.view.addAndAttachViewToMargins(view: navigationViewController.view)
+        navigationViewController.didMove(toParentViewController: coordinator.parentViewController)
         return coordinator
     }
     

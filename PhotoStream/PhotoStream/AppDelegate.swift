@@ -16,17 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        window = UIWindow.init(frame: UIScreen.main.bounds)
+        //window = UIWindow.init(frame: UIScreen.main.bounds)
         //TODO Gonza: Add viewController from coordinator as rootViewController
         let viewController = UIViewController.init()
         viewController.view.frame = UIScreen.main.bounds
         window?.rootViewController = viewController
         
         let networkManager = NetworkManager()
-        
-        PhotoStreamCoordinator.spawnPhotoStream(parentViewController: viewController, networkManager: networkManager)
+        setupAppLookAndFeel()
+        _ = PhotoStreamCoordinator.spawnPhotoStream(parentViewController: viewController, networkManager: networkManager)
         window?.makeKeyAndVisible()
         return true
+    }
+    
+    func setupAppLookAndFeel() {
+        UINavigationBar.appearance().backgroundColor = .black
+        UINavigationBar.appearance().isOpaque = true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

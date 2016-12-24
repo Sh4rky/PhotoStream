@@ -12,33 +12,53 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoStreamViewController" customModule="PhotoStream" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Tg0-4r-Uuc" id="ssg-Xv-KBV"/>
+                <outlet property="loadingOverlayView" destination="ue0-0R-drU" id="5lC-nh-dFv"/>
                 <outlet property="view" destination="iN0-l3-epB" id="AId-6i-eqj"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tg0-4r-Uuc">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SkU-NP-FGu">
-                        <size key="itemSize" width="50" height="50"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="SkU-NP-FGu">
+                        <size key="itemSize" width="93" height="90"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ue0-0R-drU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="J8l-LY-45O">
+                            <rect key="frame" x="169" y="265" width="37" height="37"/>
+                            <color key="color" red="0.76862745099999996" green="0.1019607843" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="J8l-LY-45O" firstAttribute="centerY" secondItem="ue0-0R-drU" secondAttribute="centerY" id="3DM-lK-bV7"/>
+                        <constraint firstItem="J8l-LY-45O" firstAttribute="centerX" secondItem="ue0-0R-drU" secondAttribute="centerX" id="3fN-IP-MoM"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="ue0-0R-drU" secondAttribute="trailing" id="4ok-UY-Uuh"/>
                 <constraint firstAttribute="trailing" secondItem="Tg0-4r-Uuc" secondAttribute="trailing" id="9HO-aw-ta5"/>
+                <constraint firstItem="ue0-0R-drU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9rC-IY-51W"/>
                 <constraint firstItem="Tg0-4r-Uuc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ylt-sg-Nr1"/>
+                <constraint firstAttribute="bottom" secondItem="ue0-0R-drU" secondAttribute="bottom" id="dwl-lK-Ig6"/>
                 <constraint firstAttribute="bottom" secondItem="Tg0-4r-Uuc" secondAttribute="bottom" id="e01-Vu-8hV"/>
                 <constraint firstItem="Tg0-4r-Uuc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="m2D-s2-Gw0"/>
+                <constraint firstItem="ue0-0R-drU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sqq-z4-Dft"/>
             </constraints>
-            <point key="canvasLocation" x="34.5" y="54.5"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="34.5" y="-73.5"/>
         </view>
     </objects>
 </document>

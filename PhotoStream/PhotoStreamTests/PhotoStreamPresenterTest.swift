@@ -26,12 +26,17 @@ class PhotoStreamPresenterTest: XCTestCase {
     }
     
     func testCreationViewController() {
-        XCTAssertTrue(type(of: self.viewController!).isEqual(PhotoStreamViewController.self))
+        guard let viewController = self.viewController
+            else {
+                XCTAssertTrue(false)
+                return
+        }
+        XCTAssertTrue(type(of: viewController) == PhotoStreamViewController.self)
     }
     
     func testLoadPhotoStream() {
         self.viewController?.presenter?.retrievePhotos()
-        //TODO Gonza: Test it calls a viewControllers methods
+        XCTAssertTrue(self.viewController?.datasource?.photos.count == 1)
     }
     
 }

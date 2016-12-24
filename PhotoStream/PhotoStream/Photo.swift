@@ -26,4 +26,14 @@ class Photo: NSObject {
 
         super.init()
     }
+    
+    static func createPhoto(dictionary: Dictionary<String, Any>) -> Photo {
+    
+        let title = dictionary["title"] as! String
+        let imageDictionary = dictionary["media"] as! Dictionary<String,Any>
+        let stringUrl = imageDictionary["m"] as! String
+        let dateTaken = dictionary["date_taken"] as! String
+        let username = dictionary["author"] as! String
+        return Photo(username: username, title: title, date: dateTaken, urlString: stringUrl)
+    }
 }

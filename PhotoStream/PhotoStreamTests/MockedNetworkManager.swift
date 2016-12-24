@@ -11,8 +11,12 @@ import UIKit
 
 class MockedNetworkManager: NetworkManager {
 
+    let photosJSON = Bundle.main.path(forResource: "photos", ofType: "json")
+    
     override func request(urlString: String, completionHandler: @escaping (Dictionary<String, Any>?) -> Void) {
-        let response = ["key": "value"]
-        completionHandler(response)
+        
+        if let dict = NSDictionary(contentsOfFile: photosJSON!) as? Dictionary<String, AnyObject> {
+            completionHandler(dict)
+        }
     }
 }

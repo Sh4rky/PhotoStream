@@ -13,6 +13,7 @@ class PhotoStreamDataSource:NSObject, UICollectionViewDataSource {
 
     var photos: Array<Photo>
     static let cellIdentifier = "PhotoCellIdentifier"
+    static let imageFrameThickness: CGFloat = 5
     let placeholderImage = UIImage(named: "no_image")!
     
     init(photos: Array<Photo> ) {
@@ -36,7 +37,7 @@ class PhotoStreamDataSource:NSObject, UICollectionViewDataSource {
         let photo = self.photos[row]
         
         let filter = AspectScaledToFitSizeFilter (
-            size: imageView.frame.size
+            size: cell.frame.size
         )
         
         imageView.af_setImage(
@@ -46,7 +47,9 @@ class PhotoStreamDataSource:NSObject, UICollectionViewDataSource {
             imageTransition: .crossDissolve(0.2)
         )
         
+        cell.contentView.backgroundColor = .black
         cell.contentView.addSubview(imageView)
+        
         return cell
     }
 }

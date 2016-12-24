@@ -9,30 +9,37 @@
 import UIKit
 import Alamofire
 
+enum NetworkError: Error {
+    case Failure
+    case InvalidURL
+}
+
+struct LocalizedErrorMessages {
+
+}
+
 class NetworkManager: NSObject {
 
-    func request(urlString: String, completionHandler:@escaping (_ response: Dictionary<String, Any>?) -> Void) {
+    func request(urlString: String, completionHandler:@escaping (_ response: Dictionary<String, Any>?, _ error: NetworkError?) -> Void) {
     
         guard let url = URL(string: urlString)
             else {
-                completionHandler(nil)
+                completionHandler(nil, NetworkError.InvalidURL)
                 return
         }
         Alamofire.request(url).response { (response) in
             guard let data = response.data else { return }
-            let result = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
-            
-            print(result!)
             var json: Dictionary<String, Any> = Dictionary()
             do {
                 json = try JSONSerialization.jsonObject(with: data,
                                                         options: JSONSerialization.ReadingOptions.allowFragments) as! Dictionary<String, Any>
             }
             catch {
-                completionHandler(nil)
+                completionHandler(nil, NetworkError.Failure)
+                return
             }
             
-            completionHandler(json)
+            completionHandler(json, nil)
         }
 
     }

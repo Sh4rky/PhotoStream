@@ -11,12 +11,21 @@ import UIKit
 
 class MockedNetworkManager: NetworkManager {
 
-    let photosJSON = Bundle.main.path(forResource: "photos", ofType: "json")
-    
-    override func request(urlString: String, completionHandler: @escaping (Dictionary<String, Any>?) -> Void) {
-        
-        if let dict = NSDictionary(contentsOfFile: photosJSON!) as? Dictionary<String, AnyObject> {
-            completionHandler(dict)
+    override func request(urlString: String,
+                          completionHandler:@escaping (_ response: Dictionary<String, AnyObject>?, _ error: NetworkError?) -> Void) {
+        let bundle = Bundle(for: type(of: self))
+        let photosJSONPath = bundle.path(forResource: "photosJSON", ofType: "")
+
+        var jsonData: Data
+        do {
+            jsonData = try NSData(contentsOfFile: photosJSONPath!) as Data
         }
+        catch {
+            completionHandler(nil, NetworkError.Failure)
+            return
+        }
+        
+        guard let json = self.parseJSON(data: jsonData) else { completionHandler(nil, .Failure); return}
+        completionHandler(json, nil)
     }
 }

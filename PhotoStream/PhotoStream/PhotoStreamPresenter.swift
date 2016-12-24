@@ -12,7 +12,7 @@ import Alamofire
 class PhotoStreamPresenter: NSObject {
    
     weak var photoStreamViewController: PhotoStreamViewController?
-    let queryStringURL: String = "https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=?"
+    let queryStringURL: String = "https://api.flickr.com/services/feeds/photos_public.gne?&per_page=40&format=json&nojsoncallback=?"
     let networkManager: NetworkManager
     
     static func createViewController(networkManager: NetworkManager) -> PhotoStreamViewController {
@@ -34,8 +34,6 @@ class PhotoStreamPresenter: NSObject {
     }
     
     func retrievePhotos() {
-        
-        self.photoStreamViewController?.showLoadingOverlay()
         networkManager.request(urlString: queryStringURL,
                                completionHandler: { [unowned self](response, error)  in
                                 
@@ -47,8 +45,6 @@ class PhotoStreamPresenter: NSObject {
                                     
                                     self.parsePhotos(jsonResponse, completionHandler: { [unowned self] (photos) in
                                         self.photoStreamViewController?.updatePhotoDatasource(photos: photos)
-                                        self.photoStreamViewController?.collectionView.reloadData()
-                                        self.photoStreamViewController?.hideLoadingOverlay()
                                     })
                                 }
         })

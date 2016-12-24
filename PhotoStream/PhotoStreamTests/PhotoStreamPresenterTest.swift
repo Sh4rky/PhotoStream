@@ -17,11 +17,11 @@ class PhotoStreamPresenterTest: XCTestCase {
         super.setUp()
         let mockedNetworkManager = MockedNetworkManager()
         self.viewController = PhotoStreamPresenter.createViewController(networkManager:mockedNetworkManager)
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        viewController = nil
         super.tearDown()
     }
     
@@ -35,8 +35,18 @@ class PhotoStreamPresenterTest: XCTestCase {
     }
     
     func testLoadPhotoStream() {
+        
+        let mockedVC = MockedPhotoStreamViewController()
+       
+        let expectation = self.expectation(description: "Parse Photos")
+        mockedVC.closure = { (photos) in
+            XCTAssertTrue(photos.count == 1)
+            expectation.fulfill()
+        }
+        
+        self.viewController?.presenter?.photoStreamViewController = mockedVC
         self.viewController?.presenter?.retrievePhotos()
-        XCTAssertTrue(self.viewController?.datasource?.photos.count == 1)
+        self.waitForExpectations(timeout: 5, handler: nil)
     }
     
 }

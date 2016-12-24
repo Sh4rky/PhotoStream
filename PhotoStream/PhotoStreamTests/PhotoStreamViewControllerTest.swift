@@ -7,21 +7,39 @@
 //
 
 import XCTest
+@testable import PhotoStream
 
 class PhotoStreamViewControllerTest: XCTestCase {
     
+    var mockedCoordinator: MockedPhotoStreamCoordinator?
+    var viewController: PhotoStreamViewController?
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        viewController = PhotoStreamViewController(nibName: "PhotoStreamViewController", bundle: nil)
+        mockedCoordinator = MockedPhotoStreamCoordinator(parentViewController: UIViewController())
+        viewController?.delegate = mockedCoordinator
+        
+        let photo = Photo(username: "Gonzalo",
+                          title:"A photo",
+                          date:"2016-12-01",
+                          urlString: "")
+        let photos: Array<Photo> = Array.init(repeating: photo, count: 1)
+        let photoStreamDatasource = PhotoStreamDataSource(photos: photos)
+        viewController?.datasource = photoStreamDatasource
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        mockedCoordinator = nil
+        viewController = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testCallSelectPhoto() {
+        XCTAssert(mockedCoordinator?.userSelectedPhotWasCalled == false)
+        let indexPath = IndexPath(row: 0, section: 0)
+        viewController?.selectedPhoto(at: indexPath)
+        XCTAssert(mockedCoordinator?.userSelectedPhotWasCalled == true)
     }
 }

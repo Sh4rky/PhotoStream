@@ -15,7 +15,6 @@ protocol PhotoStreamViewControllerDelegate: class {
 class PhotoStreamViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var loadingOverlayView: UIView!
     
     var datasource: PhotoStreamDataSource?
     var presenter: PhotoStreamPresenter?
@@ -42,18 +41,8 @@ class PhotoStreamViewController: UIViewController {
         else {
             datasource?.photos = photos
         }
-    }
-    
-    func showLoadingOverlay() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.loadingOverlayView.alpha = 1
-        })
-    }
-    
-    func hideLoadingOverlay() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.loadingOverlayView.alpha = 0
-        })
+        
+        self.collectionView.reloadData()
     }
     
     func showErrorMessage(message: String) {
@@ -62,6 +51,12 @@ class PhotoStreamViewController: UIViewController {
                                     message: message, delegate: self,
                                     cancelButtonTitle: NSLocalizedString("Ok", comment: "aknowledge action"))
         alertView.show()
+    }
+    
+    func selectedPhoto(at: IndexPath) {
+        let item = self.datasource?.photos[at.row]
+        let selectedPhoto: Photo =  item! as Photo
+        self.delegate?.userSelectedPhoto(photo: selectedPhoto)
     }
 }
 
@@ -80,7 +75,7 @@ extension PhotoStreamViewController: UICollectionViewDelegate {
         }
         
         UIView.transition(with: selectedCell,
-                          duration: 0.3,
+                          duration: 1.0,
                           options: UIViewAnimationOptions.curveEaseInOut,
                           animations: animationClosureIn,
                           completion: {
@@ -90,9 +85,7 @@ extension PhotoStreamViewController: UICollectionViewDelegate {
                                 frame.size.height = selectedCell.frame.size.height * 0.2
                                 selectedCell.frame = frame
             })
-        let item = self.datasource?.photos[indexPath.row]
-        let selectedPhoto: Photo =  item! as Photo
-        self.delegate?.userSelectedPhoto(photo: selectedPhoto)
+        self.selectedPhoto(at: indexPath)
     }
 }
 

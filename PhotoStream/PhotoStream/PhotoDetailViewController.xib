@@ -24,8 +24,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MiC-WU-V5L">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                 </imageView>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faG-Ln-zqt">
-                    <rect key="frame" x="0.0" y="407" width="375" height="65"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faG-Ln-zqt">
+                    <rect key="frame" x="0.0" y="538" width="375" height="65"/>
                     <subviews>
                         <view alpha="0.40000000000000002" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7o-k8-RZW">
                             <rect key="frame" x="0.0" y="-7" width="375" height="72"/>
@@ -55,7 +55,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="MiC-WU-V5L" secondAttribute="bottom" id="2Yo-qP-zuu"/>
                 <constraint firstItem="MiC-WU-V5L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3OP-03-vVs"/>
@@ -63,7 +63,7 @@
                 <constraint firstItem="faG-Ln-zqt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Czr-kX-fRI"/>
                 <constraint firstAttribute="trailing" secondItem="MiC-WU-V5L" secondAttribute="trailing" id="KYN-D8-9wf"/>
                 <constraint firstItem="MiC-WU-V5L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Lne-5X-IpG"/>
-                <constraint firstAttribute="bottom" secondItem="faG-Ln-zqt" secondAttribute="bottom" constant="111" id="Uut-oR-ABV"/>
+                <constraint firstAttribute="bottom" secondItem="faG-Ln-zqt" secondAttribute="bottom" id="Uut-oR-ABV"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
             <point key="canvasLocation" x="34.5" y="-565.5"/>

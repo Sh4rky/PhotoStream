@@ -33,7 +33,7 @@ class PhotoDetailViewController: UIViewController {
             withURL: (photo?.url)!,
             placeholderImage: placeholderImage,
             filter: filter,
-            imageTransition: .crossDissolve(0.2)
+            imageTransition: .flipFromLeft(1.5)
         )
         
         self.titleLabel.text = photo?.title

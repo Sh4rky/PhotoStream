@@ -26,8 +26,9 @@ class PhotoStreamViewController: UIViewController {
         self.title = NSLocalizedString("Photo Stream", comment: "title for photo stream section")
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: PhotoStreamDataSource.cellIdentifier)
         collectionView.allowsSelection = true
-        self.collectionView.backgroundColor = .black
+        self.collectionView.backgroundColor = .darkGray
         self.collectionView.delegate = self
+        
         
         presenter?.loadView()
     }
@@ -62,16 +63,12 @@ class PhotoStreamViewController: UIViewController {
 
 extension PhotoStreamViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
         collectionView.collectionViewLayout.invalidateLayout()
         let selectedCell: UICollectionViewCell = self.collectionView.cellForItem(at: indexPath)!
         
         let animationClosureIn = { [unowned selectedCell] in
-            var frame: CGRect = selectedCell.frame
-            frame.size.width = selectedCell.frame.size.width * 1.8
-            frame.size.height = selectedCell.frame.size.height * 1.8
-            selectedCell.frame = frame
+            selectedCell.backgroundColor = .white
         }
         
         UIView.transition(with: selectedCell,
@@ -80,11 +77,13 @@ extension PhotoStreamViewController: UICollectionViewDelegate {
                           animations: animationClosureIn,
                           completion: {
                             [unowned selectedCell] (Bool) in
-                                var frame: CGRect = selectedCell.frame
-                                frame.size.width = selectedCell.frame.size.width * 0.2
-                                frame.size.height = selectedCell.frame.size.height * 0.2
-                                selectedCell.frame = frame
-            })
+                            selectedCell.backgroundColor = .black
+        })
+        
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedPhoto(at: indexPath)
     }
 }

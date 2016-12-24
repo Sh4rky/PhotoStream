@@ -27,6 +27,8 @@
 		C1EA1F521E0C93AB00D61455 /* MockedNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F511E0C93AB00D61455 /* MockedNetworkManager.swift */; };
 		C1EA1F551E0D608F00D61455 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F541E0D608F00D61455 /* UIView+Autolayout.swift */; };
 		C1EA1F571E0DC05800D61455 /* photos.json in Resources */ = {isa = PBXBuildFile; fileRef = C1EA1F561E0DC05700D61455 /* photos.json */; };
+		C1EA1F5A1E0DF9FF00D61455 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EA1F581E0DF9FF00D61455 /* PhotoDetailViewController.swift */; };
+		C1EA1F5B1E0DF9FF00D61455 /* PhotoDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1EA1F591E0DF9FF00D61455 /* PhotoDetailViewController.xib */; };
 		D375FD1B90B678877F5F540F /* Pods_PhotoStreamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A158FB42A8B2CE43F72627F8 /* Pods_PhotoStreamTests.framework */; };
 		FCB38D3D8018B965DBCB3375 /* Pods_PhotoStream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF8AC4E912C7CDCC9998F9B /* Pods_PhotoStream.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,8 @@
 		C1EA1F511E0C93AB00D61455 /* MockedNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockedNetworkManager.swift; sourceTree = "<group>"; };
 		C1EA1F541E0D608F00D61455 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		C1EA1F561E0DC05700D61455 /* photos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = photos.json; sourceTree = "<group>"; };
+		C1EA1F581E0DF9FF00D61455 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		C1EA1F591E0DF9FF00D61455 /* PhotoDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoDetailViewController.xib; sourceTree = "<group>"; };
 		CE39CA2E7E66EFF6A6D7F317 /* Pods-PhotoStream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoStream.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoStream/Pods-PhotoStream.release.xcconfig"; sourceTree = "<group>"; };
 		E2D71B025D55CD630A607BA3 /* Pods-PhotoStreamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoStreamUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoStreamUITests/Pods-PhotoStreamUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E2E300FCBCA01BA81ABE2F9C /* Pods-PhotoStreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoStreamUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoStreamUITests/Pods-PhotoStreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 				C1EA1F391E0C1F4F00D61455 /* PhotoStreamPresenter.swift */,
 				C1EA1F421E0C202300D61455 /* PhotoStreamDataSource.swift */,
 				C1EA1F4B1E0C698800D61455 /* PhotoStreamViewController.xib */,
+				C1EA1F581E0DF9FF00D61455 /* PhotoDetailViewController.swift */,
+				C1EA1F591E0DF9FF00D61455 /* PhotoDetailViewController.xib */,
 			);
 			name = PhotoStream;
 			sourceTree = "<group>";
@@ -372,6 +378,7 @@
 			files = (
 				C1EA1F4C1E0C698800D61455 /* PhotoStreamViewController.xib in Resources */,
 				C1EA1F131E0C11A100D61455 /* LaunchScreen.storyboard in Resources */,
+				C1EA1F5B1E0DF9FF00D61455 /* PhotoDetailViewController.xib in Resources */,
 				C1EA1F101E0C11A100D61455 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +534,7 @@
 				C1EA1F371E0C1F1000D61455 /* PhotoStreamCoordinator.swift in Sources */,
 				C1EA1F431E0C202300D61455 /* PhotoStreamDataSource.swift in Sources */,
 				C1EA1F551E0D608F00D61455 /* UIView+Autolayout.swift in Sources */,
+				C1EA1F5A1E0DF9FF00D61455 /* PhotoDetailViewController.swift in Sources */,
 				C1EA1F4F1E0C85DD00D61455 /* NetworkManager.swift in Sources */,
 				C1EA1F3A1E0C1F4F00D61455 /* PhotoStreamPresenter.swift in Sources */,
 			);

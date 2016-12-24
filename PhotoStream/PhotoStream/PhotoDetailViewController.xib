@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoDetailViewController" customModule="PhotoStream" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="MiC-WU-V5L" id="ENJ-9p-94f"/>
+                <outlet property="titleLabel" destination="HoM-OU-DI2" id="K7u-eX-W6s"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MiC-WU-V5L">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faG-Ln-zqt">
+                    <rect key="frame" x="0.0" y="538" width="375" height="65"/>
+                    <subviews>
+                        <view alpha="0.40000000000000002" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f7o-k8-RZW">
+                            <rect key="frame" x="0.0" y="-7" width="375" height="72"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HoM-OU-DI2">
+                            <rect key="frame" x="18" y="0.0" width="336" height="57"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="277" id="wTU-8T-tTE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="f7o-k8-RZW" secondAttribute="bottom" id="5uG-T4-htC"/>
+                        <constraint firstAttribute="trailing" secondItem="f7o-k8-RZW" secondAttribute="trailing" id="61V-6I-862"/>
+                        <constraint firstItem="f7o-k8-RZW" firstAttribute="leading" secondItem="faG-Ln-zqt" secondAttribute="leading" id="CUi-Nz-MYb"/>
+                        <constraint firstAttribute="bottom" secondItem="HoM-OU-DI2" secondAttribute="bottom" constant="8" id="GIh-Uj-h9d"/>
+                        <constraint firstItem="HoM-OU-DI2" firstAttribute="leading" secondItem="faG-Ln-zqt" secondAttribute="leading" constant="49" id="HnY-2N-LSR"/>
+                        <constraint firstItem="f7o-k8-RZW" firstAttribute="top" secondItem="faG-Ln-zqt" secondAttribute="top" id="RRC-QA-sCM"/>
+                        <constraint firstAttribute="height" constant="65" id="XWm-jM-MRY"/>
+                        <constraint firstItem="HoM-OU-DI2" firstAttribute="top" secondItem="faG-Ln-zqt" secondAttribute="top" id="dWC-Cp-sXp"/>
+                        <constraint firstAttribute="trailing" secondItem="HoM-OU-DI2" secondAttribute="trailing" constant="49" id="x3a-nx-z0F"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="MiC-WU-V5L" secondAttribute="bottom" id="2Yo-qP-zuu"/>
+                <constraint firstItem="MiC-WU-V5L" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="3OP-03-vVs"/>
+                <constraint firstAttribute="trailing" secondItem="faG-Ln-zqt" secondAttribute="trailing" id="Ber-C1-Xfw"/>
+                <constraint firstItem="faG-Ln-zqt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Czr-kX-fRI"/>
+                <constraint firstAttribute="trailing" secondItem="MiC-WU-V5L" secondAttribute="trailing" id="KYN-D8-9wf"/>
+                <constraint firstItem="MiC-WU-V5L" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Lne-5X-IpG"/>
+                <constraint firstAttribute="bottom" secondItem="faG-Ln-zqt" secondAttribute="bottom" id="Uut-oR-ABV"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+            <point key="canvasLocation" x="34.5" y="-565.5"/>
+        </view>
+    </objects>
+</document>

@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PhotoStreamViewControllerDelegate: class {
+    func userSelectedPhoto(photo: Photo)
+}
+
 class PhotoStreamViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
@@ -16,11 +20,12 @@ class PhotoStreamViewController: UIViewController {
     var datasource: PhotoStreamDataSource?
     var presenter: PhotoStreamPresenter?
     
+    weak var delegate:PhotoStreamViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = NSLocalizedString("Photo Stream", comment: "title for photo stream section")
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: PhotoStreamDataSource.cellIdentifier)
-        //collectionView.backgroundView?.backgroundColor = UIColor.black
         collectionView.allowsSelection = true
         self.collectionView.backgroundColor = .black
         self.collectionView.delegate = self
@@ -85,6 +90,9 @@ extension PhotoStreamViewController: UICollectionViewDelegate {
                                 frame.size.height = selectedCell.frame.size.height * 0.2
                                 selectedCell.frame = frame
             })
+        let item = self.datasource?.photos[indexPath.row]
+        let selectedPhoto: Photo =  item! as Photo
+        self.delegate?.userSelectedPhoto(photo: selectedPhoto)
     }
 }
 

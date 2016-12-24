@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var coordinator: PhotoStreamCoordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let networkManager = NetworkManager()
         setupAppLookAndFeel()
-        _ = PhotoStreamCoordinator.spawnPhotoStream(parentViewController: viewController, networkManager: networkManager)
+        self.coordinator = PhotoStreamCoordinator.spawnPhotoStream(parentViewController: viewController, networkManager: networkManager)
         window?.makeKeyAndVisible()
         return true
     }

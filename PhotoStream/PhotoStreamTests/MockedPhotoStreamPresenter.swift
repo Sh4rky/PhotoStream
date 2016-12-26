@@ -13,7 +13,7 @@ class MockedPhotoStreamPresenter: PhotoStreamPresenter {
     
     var wasRetrievePhotoCalled: Bool = false
     
-    override func retrievePhotos() {
+    override func retrievePhotos(_ search: String?) {
         self.wasRetrievePhotoCalled = true
     }
 }

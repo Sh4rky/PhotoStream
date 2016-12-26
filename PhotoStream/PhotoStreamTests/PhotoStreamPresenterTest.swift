@@ -45,7 +45,7 @@ class PhotoStreamPresenterTest: XCTestCase {
         }
         
         self.viewController?.presenter?.photoStreamViewController = mockedVC
-        self.viewController?.presenter?.retrievePhotos()
+        self.viewController?.presenter?.retrievePhotos(nil)
         self.waitForExpectations(timeout: 5, handler: nil)
     }
     

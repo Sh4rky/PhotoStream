@@ -21,7 +21,7 @@ class PhotoStreamDataSourceTest: XCTestCase {
                                 title:"A photo",
                                 date:"2016-12-01",
                                 urlString: "")
-        let photos: [Photo] = Array(repeating: photo, count: 1) as! [Photo]
+        let photos: [Photo] = Array(repeating: photo, count: 1)
         photoStreamDatasource = PhotoStreamDataSource(photos: photos)
         
         let layout = UICollectionViewFlowLayout()

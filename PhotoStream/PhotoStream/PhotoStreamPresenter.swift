@@ -30,11 +30,18 @@ class PhotoStreamPresenter: NSObject {
     
     func loadView() {
         //Network request to retrieve photos
-        retrievePhotos()
+        retrievePhotos(nil)
     }
     
-    func retrievePhotos() {
-        networkManager.request(urlString: queryStringURL,
+    func retrievePhotos(_ search: String?) {
+        
+        var queryString: String = queryStringURL
+        if let searchCriteria = search  {
+            let searchString = String(format:"&tags=%@", searchCriteria)
+            queryString += searchString
+        }
+        
+        networkManager.request(urlString: queryString,
                                completionHandler: { [unowned self](response, error)  in
                                 
                                 if error != nil {

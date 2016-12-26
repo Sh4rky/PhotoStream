@@ -32,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupAppLookAndFeel() {
         UINavigationBar.appearance().backgroundColor = .black
         UINavigationBar.appearance().isOpaque = true
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().barTintColor = .black
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
     }
 
 }

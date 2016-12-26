@@ -15,6 +15,7 @@ protocol PhotoStreamViewControllerDelegate: class {
 class PhotoStreamViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var datasource: PhotoStreamDataSource?
     var presenter: PhotoStreamPresenter?
@@ -62,37 +63,26 @@ class PhotoStreamViewController: UIViewController {
 }
 
 extension PhotoStreamViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        collectionView.collectionViewLayout.invalidateLayout()
-        let selectedCell: UICollectionViewCell = self.collectionView.cellForItem(at: indexPath)!
-        
-        let animationClosureIn = { [unowned selectedCell] in
-            selectedCell.backgroundColor = .white
-        }
-        
-        UIView.transition(with: selectedCell,
-                          duration: 1.0,
-                          options: UIViewAnimationOptions.curveEaseInOut,
-                          animations: animationClosureIn,
-                          completion: {
-                            [unowned selectedCell] (Bool) in
-                            selectedCell.backgroundColor = .black
-        })
-        
-        return true
-    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedPhoto(at: indexPath)
     }
 }
 
 extension PhotoStreamViewController: UIAlertViewDelegate {
-
     func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         self.presenter?.loadView()
         alertView.dismiss(withClickedButtonIndex: buttonIndex, animated: true)
+    }
+}
+
+extension PhotoStreamViewController: UISearchBarDelegate {
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.presenter?.retrievePhotos(searchBar.text)
+        searchBar.resignFirstResponder()
+    }
+    public func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.presenter?.retrievePhotos(nil)
+        searchBar.resignFirstResponder()
     }
 }
 

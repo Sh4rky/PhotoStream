@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoStreamViewController" customModule="PhotoStream" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="Tg0-4r-Uuc" id="ssg-Xv-KBV"/>
+                <outlet property="searchBar" destination="sfW-mL-hMM" id="Xzk-Ix-enp"/>
                 <outlet property="view" destination="iN0-l3-epB" id="AId-6i-eqj"/>
             </connections>
         </placeholder>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tg0-4r-Uuc">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="44" width="375" height="559"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="SkU-NP-FGu">
                         <size key="itemSize" width="93" height="90"/>
@@ -30,16 +31,29 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <searchBar contentMode="redraw" barStyle="black" placeholder="Filters such as: art, landscape, etc." translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfW-mL-hMM">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="QO1-cY-AEA"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="3qh-RU-gQU"/>
+                    </connections>
+                </searchBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="sfW-mL-hMM" secondAttribute="trailing" id="1BM-9i-HRW"/>
                 <constraint firstAttribute="trailing" secondItem="Tg0-4r-Uuc" secondAttribute="trailing" id="9HO-aw-ta5"/>
-                <constraint firstItem="Tg0-4r-Uuc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ylt-sg-Nr1"/>
+                <constraint firstItem="sfW-mL-hMM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EPc-1i-gYe"/>
+                <constraint firstItem="Tg0-4r-Uuc" firstAttribute="top" secondItem="sfW-mL-hMM" secondAttribute="bottom" id="TlL-tg-Vr4"/>
+                <constraint firstItem="sfW-mL-hMM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dlU-86-Qtk"/>
                 <constraint firstAttribute="bottom" secondItem="Tg0-4r-Uuc" secondAttribute="bottom" id="e01-Vu-8hV"/>
                 <constraint firstItem="Tg0-4r-Uuc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="m2D-s2-Gw0"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
-            <point key="canvasLocation" x="34.5" y="-73.5"/>
+            <point key="canvasLocation" x="34.5" y="-137.5"/>
         </view>
     </objects>
 </document>

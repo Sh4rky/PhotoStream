@@ -14,6 +14,7 @@ class PhotoStreamDataSource:NSObject, UICollectionViewDataSource {
     var photos: Array<Photo>
     static let cellIdentifier = "PhotoCellIdentifier"
     static let imageFrameThickness: CGFloat = 5
+    static let imageViewTag = 201612251007
     let placeholderImage = UIImage(named: "no_image")!
     
     init(photos: [Photo] ) {
@@ -32,7 +33,16 @@ class PhotoStreamDataSource:NSObject, UICollectionViewDataSource {
     }
     
     func setupCellImageView(row: Int, cell: UICollectionViewCell) -> UICollectionViewCell {
-        let imageView = UIImageView(frame: cell.contentView.frame)
+       
+
+        var imageView: UIImageView
+        if  cell.contentView.viewWithTag(PhotoStreamDataSource.imageViewTag) == nil {
+            imageView = UIImageView(frame: cell.contentView.frame)
+            imageView.tag = PhotoStreamDataSource.imageViewTag
+        }
+        else {
+            imageView = cell.contentView.viewWithTag(PhotoStreamDataSource.imageViewTag) as! UIImageView
+        }
         
         let photo = self.photos[row]
         

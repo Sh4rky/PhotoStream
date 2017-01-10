@@ -30,7 +30,6 @@ class PhotoStreamViewController: UIViewController {
         self.collectionView.backgroundColor = .darkGray
         self.collectionView.delegate = self
         
-        
         presenter?.loadView()
     }
     
